@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var EventsAppComponent = (function () {
-    function EventsAppComponent() {
+var platform_browser_1 = require('@angular/platform-browser');
+var events_app_component_1 = require('./events-app.component');
+var AppModule = (function () {
+    function AppModule() {
     }
-    EventsAppComponent = __decorate([
-        core_1.Component({
-            selector: 'events-app',
-            template: '<h2>Events Component</h2>'
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [events_app_component_1.EventsAppComponent],
+            bootstrap: [events_app_component_1.EventsAppComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], EventsAppComponent);
-    return EventsAppComponent;
+    ], AppModule);
+    return AppModule;
 }());
-exports.EventsAppComponent = EventsAppComponent;
-//# sourceMappingURL=events-app.component.js.map
+exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map
