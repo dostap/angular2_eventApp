@@ -9,17 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var EventsAppComponent = (function () {
-    function EventsAppComponent() {
+var EventsListComponent = (function () {
+    function EventsListComponent() {
+        this.event1 = {
+            id: 1,
+            name: 'Angular Connect',
+            date: '9/26/2036',
+            time: '10:00 am',
+            price: 599.99,
+            imageUrl: 'app/assets/images/angularconnect-shield.png',
+            location: {
+                address: '1057 DT',
+                city: 'London',
+                country: 'England'
+            }
+        };
     }
-    EventsAppComponent = __decorate([
+    EventsListComponent = __decorate([
         core_1.Component({
-            selector: 'events-app',
-            template: '<events-list></events-list>'
+            selector: 'events-list',
+            template: "\n    <div>\n    <h1>Upcoming Angular 2 Events</h1>\n    <hr />\n        <event-thumbnail [event]=\"event1\"></event-thumbnail>\n    </div>\n    ",
         }), 
         __metadata('design:paramtypes', [])
-    ], EventsAppComponent);
-    return EventsAppComponent;
+    ], EventsListComponent);
+    return EventsListComponent;
 }());
-exports.EventsAppComponent = EventsAppComponent;
-//# sourceMappingURL=events-app.component.js.map
+exports.EventsListComponent = EventsListComponent;
+//# sourceMappingURL=events-list.component.js.map
