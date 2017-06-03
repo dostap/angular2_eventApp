@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'tasklist-app',
-    template: '<task-list></task-list>'
+    template: '<tasks-list></tasks-list>'
 })
 export class TaskListAppComponent {
 

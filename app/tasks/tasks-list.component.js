@@ -9,22 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var tasklist_app_component_1 = require('./tasklist-app.component');
-var tasks_list_component_1 = require('./tasks/tasks-list.component');
-var AppModule = (function () {
-    function AppModule() {
+var TasksListComponent = (function () {
+    function TasksListComponent() {
+        this.task = {
+            id: 1,
+            name: 'Groceries',
+            date: '9/26/2036',
+            time: '10:00 am',
+            imageUrl: 'app/assets/images/angularconnect-shield.png',
+            counter: 0,
+            notes: 'Buy organic butter'
+        };
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [tasklist_app_component_1.TaskListAppComponent,
-                tasks_list_component_1.TasksListComponent],
-            bootstrap: [tasklist_app_component_1.TaskListAppComponent]
+    TasksListComponent = __decorate([
+        core_1.Component({
+            selector: 'tasks-list',
+            templateUrl: 'app/tasks/tasks-list.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], TasksListComponent);
+    return TasksListComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.TasksListComponent = TasksListComponent;
+//# sourceMappingURL=tasks-list.component.js.map

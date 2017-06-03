@@ -15,7 +15,7 @@ var TaskListAppComponent = (function () {
     TaskListAppComponent = __decorate([
         core_1.Component({
             selector: 'tasklist-app',
-            template: '<task-list></task-list>'
+            template: '<tasks-list></tasks-list>'
         }), 
         __metadata('design:paramtypes', [])
     ], TaskListAppComponent);
