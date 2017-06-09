@@ -9,28 +9,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var EventThumbnailComponent = (function () {
-    function EventThumbnailComponent() {
+var TaskThumbnailComponent = (function () {
+    function TaskThumbnailComponent() {
         //common pattern for output parameters
-        this.eventClick = new core_1.EventEmitter();
+        //parent component needs to watch for the Ourput name, in this case taskClick
+        this.taskClick = new core_1.EventEmitter();
+        this.taskProperty = "some value";
     }
+    TaskThumbnailComponent.prototype.handleDone = function () {
+        console.log('Done! add to counter');
+        //send some data to the parent component i.e. task list
+        this.taskClick.emit(this.task.name);
+    };
+    TaskThumbnailComponent.prototype.handleDontKnow = function () {
+        console.log('foo');
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], EventThumbnailComponent.prototype, "event", void 0);
+    ], TaskThumbnailComponent.prototype, "task", void 0);
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
-    ], EventThumbnailComponent.prototype, "eventClick", void 0);
-    EventThumbnailComponent = __decorate([
+    ], TaskThumbnailComponent.prototype, "taskClick", void 0);
+    TaskThumbnailComponent = __decorate([
         core_1.Component({
-            selector: 'event-thumbnail',
-            template: "\n    <div class=\"well hoverwell thumbnail\">\n        <h2>{{event.name}}</h2>\n        <div>Date: {{event.date}}</div>\n        <div>Time: {{event.time}}</div>\n        <div>Price: ${{event.price}}</div>\n        <div>\n            <span>Location: {{event.location.address}}</span>\n            <span class=\"pad-left\">{{event.location.city}}, {{event.location.country}}</span>\n        </div>\n    </div>\n    ",
-            styles: ["\n    .pad-left {margin-left: 10px;}\n    .well div {color: #bbb}\n    "]
+            selector: 'task-thumbnail',
+            template: "\n    <div class=\"well hoverwell thumbnail\">\n        <h2>{{task.name}}</h2>\n        <div class=\"pad-left\">\n            <div>Date: {{task.date}}</div>\n            <div>Time: {{task.time}}</div>\n            <div>Count: {{task.counter}}</div>\n            <div>Notes: {{task.notes}} </div>\n            <div class=\"pad-top\">\n                <button class=\"btn btn-success\" (click)=\"handleDone()\">Done!</button>\n                <button class=\"btn btn-danger\" (click)=\"handleWontDo()\">Won't Do</button>\n            </div>\n        </div>\n    </div>\n    ",
+            styles: ["\n    .pad-left {margin-left: 10px;}\n    .pad-top {margin-top: 7px;}\n    "]
         }), 
         __metadata('design:paramtypes', [])
-    ], EventThumbnailComponent);
-    return EventThumbnailComponent;
+    ], TaskThumbnailComponent);
+    return TaskThumbnailComponent;
 }());
-exports.EventThumbnailComponent = EventThumbnailComponent;
+exports.TaskThumbnailComponent = TaskThumbnailComponent;
 //# sourceMappingURL=task-thumbnail.component.js.map

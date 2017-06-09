@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TaskListAppComponent = (function () {
-    function TaskListAppComponent() {
+var NavBarComponent = (function () {
+    function NavBarComponent() {
     }
-    TaskListAppComponent = __decorate([
+    NavBarComponent = __decorate([
         core_1.Component({
-            selector: 'tasklist-app',
-            template: "<nav-bar></nav-bar><tasks-list></tasks-list>"
+            selector: 'nav-bar',
+            templateUrl: 'app/nav/navbar.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], TaskListAppComponent);
-    return TaskListAppComponent;
+    ], NavBarComponent);
+    return NavBarComponent;
 }());
-exports.TaskListAppComponent = TaskListAppComponent;
-//# sourceMappingURL=tasklist-app.component.js.map
+exports.NavBarComponent = NavBarComponent;
+//# sourceMappingURL=navbar.component.js.map

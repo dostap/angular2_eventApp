@@ -6,6 +6,9 @@
 .hoverwell {
   background-color: #3498db;
 }
+.navbar {
+  background-color: #3498db;
+}
 .container {
   padding-top: 10px;
   background-color: #2980b9;
@@ -19,7 +22,9 @@
 button {
   color: #555;
 }
-
+.btn-default {
+  background-color: #8e44ad;
+}
 [hidden] {
   display: none !important;
 }
@@ -35,4 +40,11 @@ button {
 }
 .toast-warning {
   background-color: #f89406;
+}
+btn-primary {
+  background-color: #2ecc71;
+}
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus {
+    color: #ebebeb;
+    background-color: #8e44ad;
 }

@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TasksListComponent = (function () {
     function TasksListComponent() {
-        this.task = {
+        this.task1 = {
             id: 1,
             name: 'Groceries',
             date: '9/26/2036',
@@ -21,10 +21,13 @@ var TasksListComponent = (function () {
             notes: 'Buy organic butter'
         };
     }
+    TasksListComponent.prototype.handleTaskClicked = function (data) {
+        console.log('Task list received ' + data);
+    };
     TasksListComponent = __decorate([
         core_1.Component({
             selector: 'tasks-list',
-            templateUrl: 'app/tasks/tasks-list.component.html',
+            template: "\n        <div>\n        <h1><img src=\"http://thedaryao.com/blog/wp-content/uploads/2016/10/purple.png\" style=\"width:5%\"/>Tasks</h1>\n        <hr />\n        <task-thumbnail #taskThumbnail [task]=\"task1\" (taskClick)=\"handleTaskClicked($event)\"></task-thumbnail>\n        <h3>{{taskThumbnail.taskProperty}}</h3>\n        <button class=\"btn btn-warning\" (click)=\"taskThumbnail.handleDontKnow()\">I dunno, I am just clicking now...</button>"
         }), 
         __metadata('design:paramtypes', [])
     ], TasksListComponent);

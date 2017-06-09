@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var tasklist_app_component_1 = require('./tasklist-app.component');
 var tasks_list_component_1 = require('./tasks/tasks-list.component');
+var task_thumbnail_component_1 = require('./tasks/task-thumbnail.component');
+var navbar_component_1 = require('./nav/navbar.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,7 +21,9 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
             declarations: [tasklist_app_component_1.TaskListAppComponent,
-                tasks_list_component_1.TasksListComponent],
+                tasks_list_component_1.TasksListComponent,
+                task_thumbnail_component_1.TaskThumbnailComponent,
+                navbar_component_1.NavBarComponent],
             bootstrap: [tasklist_app_component_1.TaskListAppComponent]
         }), 
         __metadata('design:paramtypes', [])
